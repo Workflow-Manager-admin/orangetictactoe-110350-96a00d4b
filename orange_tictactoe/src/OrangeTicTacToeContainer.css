@@ -1,0 +1,186 @@
+/* Orange theme variables */
+:root {
+  --orange-primary: #FFA500;
+  --orange-secondary: #FF8C00;
+  --orange-accent: #FF7F50;
+  --orange-bg: #FFF7EE;
+  --ott-dark: #232323;
+  --ott-white: #fff;
+  --ott-border: rgba(0,0,0,0.1);
+}
+
+/* Layout container */
+.orange-ttt-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(150deg, var(--orange-bg) 0%, var(--ott-white) 100%);
+}
+
+.ott-navbar {
+  background: var(--orange-secondary);
+  color: var(--ott-white);
+  font-weight: 600;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  justify-content: center;
+  box-shadow: 0 1px 7px 0 rgba(255, 138, 0, 0.08);
+  letter-spacing: 0.04em;
+}
+
+.ott-logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.ott-logo-symbol {
+  font-size: 1.8rem;
+  filter: drop-shadow(0px 2px 4px rgba(255,172,64,0.15));
+}
+
+.ott-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ott-hero-section {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.ott-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--orange-primary);
+}
+
+.ott-description {
+  color: var(--orange-accent);
+  margin-top: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 26px;
+}
+
+.ott-game-container {
+  background: var(--ott-white);
+  padding: 18px 24px 24px 24px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(255, 180, 64, 0.12), 0 1.5px 6px 0 var(--orange-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 270px;
+  margin-bottom: 40px;
+}
+
+.ott-status-bar {
+  color: var(--orange-secondary);
+  background: rgba(255,180,64,0.07);
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 10px 0;
+  margin-bottom: 16px;
+  font-size: 1.18rem;
+  width: 100%;
+  text-align: center;
+}
+
+.ott-board-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.ott-board-row {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.ott-square {
+  background: var(--orange-primary);
+  border: 2px solid var(--orange-secondary);
+  color: var(--ott-white);
+  font-size: 2.2rem;
+  font-weight: bold;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.12s, box-shadow 0.15s;
+  box-shadow: 0 1px 8px 0 rgba(255, 165, 0, 0.09);
+  outline: none;
+}
+.ott-square:focus {
+  border-color: var(--orange-accent);
+}
+.ott-square.highlight {
+  background: var(--orange-accent);
+  color: var(--ott-dark);
+  box-shadow: 0 0 0 2px var(--orange-accent);
+}
+
+.ott-btn {
+  margin-top: 3px;
+  background: var(--orange-secondary);
+  color: var(--ott-white);
+  font-weight: 600;
+  font-size: 1.07rem;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.15s;
+  box-shadow: 0 0 6px rgba(255, 140, 0, 0.07);
+}
+.ott-btn:hover {
+  background: var(--orange-primary);
+}
+
+.ott-btn-restart {
+  margin-top: 8px;
+}
+
+.ott-footer {
+  padding: 18px 0 9px 0;
+  text-align: center;
+  color: var(--orange-accent);
+  font-size: 1rem;
+}
+
+.ott-accent {
+  color: var(--orange-primary);
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .ott-title {
+    font-size: 2rem;
+  }
+  .ott-game-container {
+    padding: 14px 8px 18px 8px;
+    min-width: 180px;
+  }
+  .ott-square {
+    width: 42px;
+    height: 42px;
+    font-size: 1.3rem;
+  }
+  .ott-status-bar {
+    font-size: 1rem;
+  }
+}
